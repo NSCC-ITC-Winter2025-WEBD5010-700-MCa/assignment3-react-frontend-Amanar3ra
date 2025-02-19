@@ -29,7 +29,9 @@ const BooksTable = ({books}) => {
   }
     return (
     <>
-      <p><Link to="/admin/books/create">Add New Book</Link></p>
+      <p><Link to="/admin/books/create"
+      className="bg-blue-700 text-white text-sm px-2 py-0 rounded-md shadow-sm hover:bg-blue-600 transition duration-200">
+        Add New Book</Link></p>
       <table className="w-full border-collapse border border-gray-200">
       <thead className="bg-gray-200">
       <tr>

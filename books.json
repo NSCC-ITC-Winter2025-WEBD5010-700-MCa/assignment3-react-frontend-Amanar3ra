@@ -1901,6 +1901,27 @@
         "currency": "USD",
         "amount": 45.86
       }
+    },
+    {
+      "id": "74b8",
+      "title": "Unique",
+      "author": "Dont know",
+      "published_year": "2020",
+      "genre": "Hahah"
+    },
+    {
+      "id": "44cd",
+      "title": "Wuthering Heights",
+      "author": "Emily Bronte",
+      "published_year": "1850",
+      "genre": "Romantic Classic"
+    },
+    {
+      "id": "5e77",
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "published_year": "1980",
+      "genre": "Sci Fi"
     }
   ]
 }
