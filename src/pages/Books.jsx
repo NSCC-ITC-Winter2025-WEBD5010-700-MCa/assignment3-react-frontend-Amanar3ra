@@ -10,7 +10,8 @@ const Books = () => {
     const { isPending, error, data: books } = useQuery({
         queryKey: ['booksData'],
         queryFn: async () => {
-            const response = await fetch('http://localhost:3000/books');
+            // const response = await fetch('http://localhost:3000/books');
+            const response = await fetch(`${import.meta.env.VITE_BOOKS_API_URL}`);
             return response.json() //returns a promise of our data
         },
         staleTime: Infinity //cache the data & store it locally
