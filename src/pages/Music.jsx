@@ -5,7 +5,7 @@ const Music = () => {
         <p>Welcome to the admin Musics.</p>
       </div>
     );
-  };
+};
   
-  export default Music;
+export default Music;
   
