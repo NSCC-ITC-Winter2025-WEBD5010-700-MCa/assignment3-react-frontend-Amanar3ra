@@ -56,7 +56,7 @@ const Navbar = () => {
             >
               <FontAwesomeIcon icon={faUser} />
               <span className="hidden md:block font-medium">
-                John Doe
+                Aman Arora
               </span>
               <FontAwesomeIcon icon={faCaretDown} />
             </button>

@@ -19,10 +19,10 @@ const router = createBrowserRouter([
     path: '/admin',
     element: <App />,
     children: [
-      {
-        path: 'home',
-        element: <Dashboard />,
-      },
+      // {
+      //   path: 'home',
+      //   element: <Dashboard />,
+      // },
       // {
       //   path: 'user-roles',
       //   element: <UserRoles />,

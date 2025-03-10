@@ -1,11 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faChartPie,
-  faUsers,
-  faUsersCog,
-  faReply,
-  faBoxOpen,
   faArrowLeft,
   faArrowRight,
   faBook
@@ -14,11 +9,11 @@ import {
 const Sidebar = ({ isCollapsed, toggleSidebar }) => {
   const sidebarItems = [
     { href: '/admin/home', label: 'Dashboard', icon: faChartPie },
-    // { href: '/admin/user-roles', label: 'User Roles', icon: faUsersCog },
-    // { href: '/admin/user-management', label: 'User Management', icon: faUsers },
-    // { href: '/admin/customers', label: 'Customers', icon: faUsers },
-    // { href: '/admin/auto-response', label: 'Auto Response', icon: faReply },
-    // { href: '/admin/subscriptions', label: 'Subscriptions', icon: faBoxOpen },
+    { href: '/admin/user-roles', label: 'User Roles', icon: faUsersCog },
+    { href: '/admin/user-management', label: 'User Management', icon: faUsers },
+    { href: '/admin/customers', label: 'Customers', icon: faUsers },
+    { href: '/admin/auto-response', label: 'Auto Response', icon: faReply },
+    { href: '/admin/subscriptions', label: 'Subscriptions', icon: faBoxOpen },
     { href: '/admin/books', label: 'Books', icon: faBook }
   ];
 
