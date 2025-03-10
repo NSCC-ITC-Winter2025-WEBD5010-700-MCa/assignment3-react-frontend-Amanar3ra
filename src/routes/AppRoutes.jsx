@@ -6,9 +6,11 @@ import App from '../App';
 // import AutoResponse from '../pages/AutoResponse';
 // import Customers from '../pages/Customers';
 // import Subscriptions from '../pages/Subscriptions';
-import Books from '../pages/Books';
-import BookCreate from '../components/books/BookCreate';
-import BookEdit from '../components/books/BookEdit';
+// import Books from '../pages/Books';
+// import BookCreate from '../components/books/BookCreate';
+// import BookEdit from '../components/books/BookEdit';
+
+import Music from '../pages/Music';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +59,11 @@ const router = createBrowserRouter([
             element: <BookEdit/>
           }
         ]
+      },
+
+      {
+        path: 'music',
+        element: <Music />
       }
     ],
   },
