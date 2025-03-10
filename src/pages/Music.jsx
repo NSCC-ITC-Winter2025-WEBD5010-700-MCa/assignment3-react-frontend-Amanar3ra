@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Outlet, useLocation } from "react-router-dom";
-// import BooksTable from "../components/books/BooksTable"
+import MusicTable from "../components/music/MusicTable"
 
 const Music = () => {
 
