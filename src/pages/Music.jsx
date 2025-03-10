@@ -20,9 +20,9 @@ const Music = () => {
 
     return (
       <div>
-        <h1 className="text-2xl font-bold">Books</h1>
+        <h1 className="text-2xl font-bold">Music</h1>
 
-        {location.pathname === '/admin/books' ? (
+        {location.pathname === '/admin/music' ? (
             isPending ?
             <div>Loading...</div> 
             :
