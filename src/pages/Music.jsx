@@ -4,7 +4,6 @@ import MusicTable from "../components/music/MusicTable"
 
 const Music = () => {
 
-    //Get the current location information
     const location = useLocation()
 
     const { isPending, error, data: music } = useQuery({
