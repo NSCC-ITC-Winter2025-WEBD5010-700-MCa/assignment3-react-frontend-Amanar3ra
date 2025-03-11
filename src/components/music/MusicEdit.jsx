@@ -11,14 +11,14 @@ function MusicEdit(){
     const {data} = useQuery({
         queryKey: ['music', id],
         queryFn: async () => {
-            const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/_${id}`);
+            const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}_${id}`);
             return response.json()
         }
     })
 
     const editMusicMutation = useMutation({
       mutationFn: async (data) => {
-        const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/_${id}`, {
+        const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}_${id}`, {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
