@@ -8,9 +8,9 @@ function MusicEdit(){
     const queryClient = useQueryClient();
 
     const { data, isLoading, error } = useQuery({
-        queryKey: ['music', id],
+        queryKey: ['music', _id],
         queryFn: async () => {
-            const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/${id}`);
+            const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/${_id}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch music data');
             }
@@ -20,7 +20,7 @@ function MusicEdit(){
 
     const editMusicMutation = useMutation({
       mutationFn: async (data) => {
-        const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/${id}`, {
+        const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/${_id}`, {
           method: 'PUT', // Changed from PATCH to PUT to match your backend
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
