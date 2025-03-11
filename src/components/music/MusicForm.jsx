@@ -35,7 +35,7 @@ export default function MusicForm({ onDataCollection, initialData }){
             placeholder="Artist"
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          {errors.author && <p className="text-red-500 text-sm mt-1">{errors.artist.message}</p>}
+          {errors.artist && <p className="text-red-500 text-sm mt-1">{errors.artist.message}</p>}
         </div>
         <div>
           <input
@@ -44,7 +44,7 @@ export default function MusicForm({ onDataCollection, initialData }){
             placeholder="Year"
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          {errors.published_year && <p className="text-red-500 text-sm mt-1">{errors.released_year.message}</p>}
+          {errors.released_year && <p className="text-red-500 text-sm mt-1">{errors.released_year.message}</p>}
         </div>
         <div>
           <input
@@ -62,7 +62,7 @@ export default function MusicForm({ onDataCollection, initialData }){
             placeholder="Rating"
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          {errors.genre && <p className="text-red-500 text-sm mt-1">{errors.ratings.rym.message}</p>}
+          {errors.ratings.rym && <p className="text-red-500 text-sm mt-1">{errors.ratings.rym.message}</p>}
         </div>
         <button
           type="submit"
