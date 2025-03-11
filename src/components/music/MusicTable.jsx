@@ -48,6 +48,7 @@ const MusicTable = ({music}) => {
       {music.map(music=>{
         return(
          <tr key={music.id} className="hover:bg-gray-100">
+         <td className="border border-gray-300 px-4 py-2">{music.id}</td>
          <td className="border border-gray-300 px-4 py-2">{music.title}</td>
          <td className="border border-gray-300 px-4 py-2">{music.artist}</td>
          <td className="border border-gray-300 px-4 py-2">{music.released_year}</td>
