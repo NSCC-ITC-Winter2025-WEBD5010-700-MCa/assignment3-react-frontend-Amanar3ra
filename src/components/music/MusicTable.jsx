@@ -54,7 +54,7 @@ const MusicTable = ({music}) => {
          <td className="border border-gray-300 px-4 py-2">{music.released_year}</td>
          <td className="border border-gray-300 px-4 py-2">{music.genre}</td>
          <td className="border border-gray-300 px-4 py-2">{music.ratings.rym}</td>
-         <td className="border border-gray-300 px-4 py-2 text-center space-x-1">
+         <td className="border border-gray-300 px-4 py-2 text-center space-x-1">Operations
           <button className="bg-green-500 text-white px-2 py-1 text-sm rounded hover:bg-green-600">Details</button>
           <button onClick={() => navigate(`/admin/music/${music.id}/edit`)} className="bg-blue-500 text-white px-2 py-1 text-sm rounded hover:bg-blue-600">Edit</button>
           <button onClick={ () => {handleDelete(music.id) }} className="bg-red-500 text-white px-2 py-1 text-sm rounded hover:bg-red-600">Delete</button>
