@@ -22,7 +22,7 @@ const MusicCreate = () => {
         },
         onSuccess : () => {
             queryClient.invalidateQueries(['musicData']),
-            navigate('/admin/music')
+            navigate('/admin/music/create')
         },
     })
 
