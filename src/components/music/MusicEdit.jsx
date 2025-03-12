@@ -11,7 +11,7 @@ function MusicEdit(){
     const {data} = useQuery({
         queryKey: ['music', id],
         queryFn: async () => {
-            const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/${id}`);
+            const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}${id}`);
             return response.json()
         }
     })
