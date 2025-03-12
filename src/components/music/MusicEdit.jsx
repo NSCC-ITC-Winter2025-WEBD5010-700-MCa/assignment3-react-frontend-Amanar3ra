@@ -9,7 +9,7 @@ function MusicEdit(){
     const queryClient = useQueryClient();
 
     const {data} = useQuery({
-        queryKey: ['music', id],
+        queryKey: ['musicData', id],
         queryFn: async () => {
             const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/${id}`);
             return response.json()

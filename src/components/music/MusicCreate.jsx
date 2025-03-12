@@ -14,7 +14,7 @@ const MusicCreate = () => {
         mutationFn: async (data) => {
             const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}`, {
               method: 'POST',
-              header: {'Content-Type' : 'application/json'},
+              headers: {'Content-Type' : 'application/json'},
               body: JSON.stringify(data)
             })
 
