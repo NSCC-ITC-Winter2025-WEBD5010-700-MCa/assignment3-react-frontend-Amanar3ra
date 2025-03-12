@@ -24,7 +24,7 @@ const MusicTable = ({music}) => {
 
   const handleDelete = (id) => {
     //Send a delete request to our api to delete the selected record
-    if(window.confirm(`Are you sure you wish to delete record ${id}`)){
+    if(window.confirm(`Are you sure you wish to delete record ${id}?`)){
       deleteBookMutation.mutate(id)
     }
   }
