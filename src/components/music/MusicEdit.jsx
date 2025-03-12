@@ -11,7 +11,7 @@ function MusicEdit(){
     const {data} = useQuery({
         queryKey: ['music', id],
         queryFn: async () => {
-            const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/_${id}`);
+            const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/${id}`);
             return response.json()
         }
     })
@@ -28,7 +28,7 @@ function MusicEdit(){
 
         // delete formattedData['ratings.rym'];
 
-        const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/_${id}`, {
+        const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/${id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)

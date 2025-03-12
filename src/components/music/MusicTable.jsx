@@ -8,7 +8,7 @@ const MusicTable = ({music}) => {
   const deleteBookMutation = useMutation({
 
     mutationFn: async (id) => {
-      const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/_${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/${id}`, {
         method: 'DELETE'
       })
       return response.json()
