@@ -7,7 +7,7 @@ export default function MusicForm({ onDataCollection, initialData }){
 
     useEffect(() => { //this only runs during initial renders of the form 
       console.log('Use effect ran:', initialData)
-      if(initialData){
+      if(initialData && initialData.ratings){
         //Pre-populate the form
         setValue('title', initialData.title)
         setValue('artist', initialData.artist)
@@ -15,7 +15,7 @@ export default function MusicForm({ onDataCollection, initialData }){
         setValue('genre', initialData.genre)
         setValue('ratings.rym', initialData.ratings.rym)
     }
-    }, [initialData])
+    }, [initialData, setValue])
 
     return (
         <form onSubmit={handleSubmit(onDataCollection)} className="space-y-4">
@@ -57,12 +57,12 @@ export default function MusicForm({ onDataCollection, initialData }){
         </div>
         <div>
           <input
-            {...register('ratings', { required: 'Rating is required!' })}
+            {...register('ratings.rym', { required: 'Rating is required!' })}
             type="text"
             placeholder="Rating"
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          {errors.ratings.rym && <p className="text-red-500 text-sm mt-1">{errors.ratings.rym.message}</p>}
+          {errors.ratings?.rym && <p className="text-red-500 text-sm mt-1">{errors.ratings.rym.message}</p>}
         </div>
         <button
           type="submit"
