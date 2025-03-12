@@ -11,6 +11,8 @@ import App from '../App';
 // import BookEdit from '../components/books/BookEdit';
 
 import Music from '../pages/Music';
+import MusicCreate from '../components/music/MusicCreate';
+import MusicEdit from '../components/music/MusicEdit';
 
 const router = createBrowserRouter([
   {
