@@ -9,7 +9,7 @@ function MusicEdit(){
     const queryClient = useQueryClient();
 
     const {data} = useQuery({
-        queryKey: ['musicData', id],
+        queryKey: ['music', id],
         queryFn: async () => {
             const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/${id}`);
             return response.json()
@@ -18,14 +18,25 @@ function MusicEdit(){
 
     const editMusicMutation = useMutation({
       mutationFn: async (data) => {
+
+        const formattedData = {
+          ...data,
+          ratings: {
+            rym: data['ratings.rym']
+          }
+        };
+
+        delete formattedData['ratings.rym'];
+
         const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/${id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
+          body: JSON.stringify(formattedData)
         });
         return response.json();
       },
       onSuccess: () => {
+        queryClient.invalidateQueries(['music', id]);
         queryClient.invalidateQueries(['musicData'])
         navigate('/admin/music')
       }
