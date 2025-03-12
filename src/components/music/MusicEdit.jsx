@@ -19,19 +19,19 @@ function MusicEdit(){
     const editMusicMutation = useMutation({
       mutationFn: async (data) => {
 
-        const formattedData = {
-          ...data,
-          ratings: {
-            rym: data['ratings.rym']
-          }
-        };
+        // const formattedData = {
+        //   ...data,
+        //   ratings: {
+        //     rym: data['ratings.rym']
+        //   }
+        // };
 
-        delete formattedData['ratings.rym'];
+        // delete formattedData['ratings.rym'];
 
         const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/${id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formattedData)
+          body: JSON.stringify(data)
         });
         return response.json();
       },

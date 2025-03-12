@@ -53,7 +53,7 @@ const MusicTable = ({music}) => {
          <td className="border border-gray-300 px-4 py-2">{music.artist}</td>
          <td className="border border-gray-300 px-4 py-2">{music.released_year}</td>
          <td className="border border-gray-300 px-4 py-2">{music.genre}</td>
-         <td className="border border-gray-300 px-4 py-2">{music.ratings.rym}</td>
+         {/* <td className="border border-gray-300 px-4 py-2">{music.ratings.rym}</td> */}
          <td className="border border-gray-300 px-4 py-2 text-center space-x-1">
           <button className="bg-green-500 text-white px-2 py-1 text-sm rounded hover:bg-green-600">Details</button>
           <button onClick={() => navigate(`/admin/music/${music._id}/edit`)} className="bg-blue-500 text-white px-2 py-1 text-sm rounded hover:bg-blue-600">Edit</button>

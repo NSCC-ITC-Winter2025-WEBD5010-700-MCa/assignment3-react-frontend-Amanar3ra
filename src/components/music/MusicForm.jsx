@@ -13,7 +13,7 @@ export default function MusicForm({ onDataCollection, initialData }){
         setValue('artist', initialData.artist)
         setValue('released_year', initialData.released_year)
         setValue('genre', initialData.genre)
-        setValue('ratings.rym', initialData.ratings.rym)
+        // setValue('ratings.rym', initialData.ratings.rym)
     }
     }, [initialData, setValue])
 
@@ -55,7 +55,7 @@ export default function MusicForm({ onDataCollection, initialData }){
           />
           {errors.genre && <p className="text-red-500 text-sm mt-1">{errors.genre.message}</p>}
         </div>
-        <div>
+        {/* <div>
           <input
             {...register('ratings.rym', { required: 'Rating is required!' })}
             type="text"
@@ -63,7 +63,7 @@ export default function MusicForm({ onDataCollection, initialData }){
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           {errors.ratings?.rym && <p className="text-red-500 text-sm mt-1">{errors.ratings.rym.message}</p>}
-        </div>
+        </div> */}
         <button
           type="submit"
           className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-all"
