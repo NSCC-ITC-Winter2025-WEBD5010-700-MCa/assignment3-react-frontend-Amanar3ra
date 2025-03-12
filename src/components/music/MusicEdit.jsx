@@ -36,7 +36,7 @@ function MusicEdit(){
         return response.json();
       },
       onSuccess: () => {
-        queryClient.invalidateQueries(['music', id]);
+        queryClient.invalidateQueries(['music', id]),
         queryClient.invalidateQueries(['musicData'])
         navigate('/admin/music')
       }
