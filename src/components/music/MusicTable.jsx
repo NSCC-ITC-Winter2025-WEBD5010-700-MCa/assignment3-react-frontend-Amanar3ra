@@ -7,8 +7,8 @@ const MusicTable = ({music}) => {
   const queryClient = useQueryClient();
   const deleteBookMutation = useMutation({
 
-    mutationFn: async (musicId) => {
-      const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/${musicId}`, {
+    mutationFn: async (id) => {
+      const response = await fetch(`${import.meta.env.VITE_MUSIC_API_URL}/${id}`, {
         method: 'DELETE'
       })
       return response.json()
@@ -22,10 +22,10 @@ const MusicTable = ({music}) => {
     }
   })
 
-  const handleDelete = (musicId) => {
+  const handleDelete = (id) => {
     //Send a delete request to our api to delete the selected record
-    if(window.confirm(`Are you sure you wish to delete record ${musicId}`)){
-      deleteBookMutation.mutate(musicId)
+    if(window.confirm(`Are you sure you wish to delete record ${id}`)){
+      deleteBookMutation.mutate(id)
     }
   }
     return (
