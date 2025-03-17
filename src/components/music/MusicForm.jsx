@@ -9,7 +9,7 @@ export default function MusicForm({ onDataCollection, initialData }){
       console.log('Use effect ran:', initialData)
       if(initialData){
         //Pre-populate the form
-        setValue('id', initialData.id)
+        // setValue('id', initialData.id)
         setValue('title', initialData.title)
         setValue('artist', initialData.artist)
         setValue('released_year', initialData.released_year)
@@ -19,7 +19,7 @@ export default function MusicForm({ onDataCollection, initialData }){
 
     return (
         <form onSubmit={handleSubmit(onDataCollection)} className="space-y-4">
-        <div> 
+        {/* <div> 
           <input
             {...register('id', { required: 'ID is required!' })}
             type="text"
@@ -27,7 +27,7 @@ export default function MusicForm({ onDataCollection, initialData }){
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           {errors.id && <p className="text-red-500 text-sm mt-1">{errors.id.message}</p>}
-        </div> 
+        </div>  */}
         <div>
           <input
             {...register('title', { required: 'Title is required!' } )}
