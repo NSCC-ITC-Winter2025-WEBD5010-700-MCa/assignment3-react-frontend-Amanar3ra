@@ -7,7 +7,7 @@ export default function MusicForm({ onDataCollection, initialData }){
 
     useEffect(() => { //this only runs during initial renders of the form 
       console.log('Use effect ran:', initialData)
-      if(initialData && initialData.ratings){
+      if(initialData){
         //Pre-populate the form
         setValue('id', initialData.id)
         setValue('title', initialData.title)
